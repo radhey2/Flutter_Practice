@@ -18,28 +18,33 @@ class Header extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.4,
               padding: const EdgeInsets.symmetric(vertical: 64.0),
               margin: const EdgeInsets.symmetric(horizontal: 256.0),
-              child: Column(
+              child: SizedBox(
+                  child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Center(
-                    child: Text(
-                      'h',
-                      style: TextStyle(
-                        fontSize: 56,
-                        fontWeight: FontWeight.w900,
-                        decoration: TextDecoration.underline,
-                        decorationThickness: 0.5,
+                  const Expanded(
+                    child: Center(
+                      child: Text(
+                        'h',
+                        style: TextStyle(
+                          fontSize: 56,
+                          fontWeight: FontWeight.w900,
+                          decoration: TextDecoration.underline,
+                          decorationThickness: 0.5,
+                        ),
                       ),
                     ),
                   ),
                   const SizedBox(height: 8),
-                  const Center(
-                    child: Text(
-                      "hi, I'm Helen. I create",
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                        fontSize: 36,
-                        fontWeight: FontWeight.w900,
+                  const Expanded(
+                    child: Center(
+                      child: Text(
+                        "hi, I'm Helen. I create",
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          fontSize: 36,
+                          fontWeight: FontWeight.w900,
+                        ),
                       ),
                     ),
                   ),
@@ -67,7 +72,7 @@ class Header extends StatelessWidget {
                     child: const Text('MEER OVER MIJ'),
                   )
                 ],
-              ),
+              )),
             ),
           ),
           Align(
